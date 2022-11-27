@@ -25,11 +25,12 @@ MainWindow::MainWindow(QWidget *parent)
     QMenu *fileMenu = menubar->addMenu("文件");
     QMenu *editMenu = menubar->addMenu("编辑");
 
-    //向文件菜单中添加行为
+    //向文件菜单中添加行为  图标资源未获取
     QAction *newfile = fileMenu->addAction("新建");
     QAction *openfile = fileMenu->addAction("打开");
     QAction *savefile = fileMenu->addAction("保存");
     //添加工具栏
+
     //通过工具栏添加行为
     QToolBar *toolBar = this->addToolBar("tools");
     toolBar->addAction(newfile);
@@ -38,7 +39,7 @@ MainWindow::MainWindow(QWidget *parent)
     toolBar->addSeparator();
     toolBar->addAction(savefile);
     toolBar->addSeparator();
-    //图标资源未获取
+
 
     //设置字体
     QLabel *fontTypeLb = new QLabel("字体：");
